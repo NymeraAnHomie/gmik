@@ -695,7 +695,7 @@ do -- Library
 
 			local Logo = Library:NewInstance("ImageLabel", true)
 			Logo.Name = "Logo"
-			Logo.Image = "http://www.roblox.com/asset/?id=17655988165"
+			Logo.Image = Options.Logo or "http://www.roblox.com/asset/?id=17655988165"
 			Logo.ScaleType = Enum.ScaleType.Fit
 			Logo.AnchorPoint = Vector2.new(0, 0.5)
 			Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -706,6 +706,10 @@ do -- Library
 			Logo.Position = UDim2.new(0, 5, 0.5, 0)
 			Logo.Size = UDim2.new(0, 20, 0, 20)
 			Logo.Parent = TopFrame
+
+			function Library:Logo(Id)
+				Logo.Image = Id
+			end
 
 			TopFrame.Parent = MainFrame
 
