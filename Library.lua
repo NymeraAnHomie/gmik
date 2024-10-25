@@ -685,6 +685,29 @@ do -- Library
 			MainFrame.Text = ""
 			MainFrame.AutoButtonColor = false
 			Library.Holder = ImageLabel
+			
+			local ScreenGui = Instance.new("ScreenGui", Path)
+			local Frame = Instance.new("Frame", ScreenGui)
+			local TextButton = Instance.new("TextButton", Frame)
+			local Outline = Instance.new("Frame", Frame)
+			
+			Frame.Size = UDim2.new(0, 50, 0, 50)
+			Frame.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+			Frame.BorderSizePixel = 1
+			Frame.BorderColor3 = Color3.new(0, 0, 0)
+			Frame.Position = UDim2.new(0.5, -25, 0.5, -25)
+			Frame.Parent = ScreenGui
+			
+			Outline.Size = UDim2.new(1, 0, 0, 1)
+			Outline.Position = UDim2.new(0, 0, 0, 0)
+			Outline.BackgroundColor3 = Color3.new(0, 0, 0)
+			
+			TextButton.Size = UDim2.new(1, 0, 1, 0)
+			TextButton.BackgroundTransparency = 1
+			TextButton.Text = ""
+			TextButton.MouseButton1Click:Connect(function()
+			    MainFrame.Visible = not MainFrame.Visible
+			end)
 
 			local TopFrame = Instance.new("Frame")
 			TopFrame.Name = "TopFrame"
