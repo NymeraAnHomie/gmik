@@ -707,10 +707,6 @@ do -- Library
 			Logo.Size = UDim2.new(0, 20, 0, 20)
 			Logo.Parent = TopFrame
 
-			function Library:Logo(Id)
-				Logo.Image = Id
-			end
-
 			TopFrame.Parent = MainFrame
 
 			local Tabs = Instance.new("ScrollingFrame")
@@ -2091,7 +2087,7 @@ do -- Library
 				end
 			end)
 			Library:Connection(game:GetService("UserInputService").InputChanged, function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement then
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 					if Sliding then
 						ISlide(input)
 					end
