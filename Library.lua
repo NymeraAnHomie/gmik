@@ -695,11 +695,11 @@ do -- Library
 			Frame.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
 			Frame.BorderSizePixel = 1
 			Frame.BorderColor3 = Color3.new(0, 0, 0)
-			Frame.Position = UDim2.new(0.5, -25, 0.5, -25)
+			Frame.Position = UDim2.new(1, -50, 0, 0)
+            Frame.AnchorPoint = Vector2.new(1, 0)
 			
 			Outline.Size = UDim2.new(1, 0, 0, 1)
 			Outline.Position = UDim2.new(0, 0, 0, 0)
-		    Outline.BorderSizePixel = 0
 			Outline.BackgroundColor3 = Color3.new(255, 255, 255)
 			
 			TextButton.Size = UDim2.new(1, 0, 1, 0)
