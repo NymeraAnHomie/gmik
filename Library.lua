@@ -686,7 +686,7 @@ do -- Library
 			MainFrame.AutoButtonColor = false
 			Library.Holder = ImageLabel
 			
-			local ScreenGui = Instance.new("ScreenGui", Path)
+			local ScreenGui = Instance.new("ScreenGui", game.CoreGui)
 			local Frame = Instance.new("Frame", ScreenGui)
 			local TextButton = Instance.new("TextButton", Frame)
 			local Outline = Instance.new("Frame", Frame)
@@ -696,7 +696,6 @@ do -- Library
 			Frame.BorderSizePixel = 1
 			Frame.BorderColor3 = Color3.new(0, 0, 0)
 			Frame.Position = UDim2.new(0.5, -25, 0.5, -25)
-			Frame.Parent = ScreenGui
 			
 			Outline.Size = UDim2.new(1, 0, 0, 1)
 			Outline.Position = UDim2.new(0, 0, 0, 0)
