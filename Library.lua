@@ -686,7 +686,7 @@ do -- Library
 			MainFrame.AutoButtonColor = false
 			Library.Holder = ImageLabel
 			
-			local ScreenGui = Instance.new("ScreenGui", game.CoreGui)
+			local ScreenGui = Instance.new("ScreenGui", Path)
 			local Frame = Instance.new("Frame", ScreenGui)
 			local TextButton = Instance.new("TextButton", Frame)
 			local Outline = Instance.new("Frame", Frame)
@@ -699,13 +699,15 @@ do -- Library
 			
 			Outline.Size = UDim2.new(1, 0, 0, 1)
 			Outline.Position = UDim2.new(0, 0, 0, 0)
-			Outline.BackgroundColor3 = Color3.new(0, 0, 0)
+		    Outline.BorderSizePixel = 0
+			Outline.BackgroundColor3 = Color3.new(255, 255, 255)
 			
 			TextButton.Size = UDim2.new(1, 0, 1, 0)
 			TextButton.BackgroundTransparency = 1
 			TextButton.Text = ""
 			TextButton.MouseButton1Click:Connect(function()
 			    MainFrame.Visible = not MainFrame.Visible
+	    		ImageLabel.Visible = not ImageLabel.Visible
 			end)
 
 			local TopFrame = Instance.new("Frame")
